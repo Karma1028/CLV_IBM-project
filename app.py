@@ -26,7 +26,7 @@ st.set_page_config(
 # ============================================================================
 BASE_DIR = Path(__file__).parent
 DATA_PATH = BASE_DIR.parent / 'WA_Fn-UseC_-Marketing-Customer-Value-Analysis.csv'
-REPORT_PATH = BASE_DIR / 'report' / 'CLV_Complete_Guide.pdf'
+REPORT_PATH = BASE_DIR / 'report' / 'IEEE_CLV_Analysis_Paper.pdf'
 
 @st.cache_data
 def load_data():
@@ -164,7 +164,7 @@ def main():
                 st.download_button(
                     label="📥 Download Full PDF Report",
                     data=f,
-                    file_name="CLV_Complete_Guide.pdf",
+                    file_name="IEEE_CLV_Analysis_Paper.pdf",
                     mime="application/pdf",
                     type="primary"
                 )
