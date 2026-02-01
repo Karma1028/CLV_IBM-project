@@ -1,0 +1,31 @@
+# Ignore Python source files (as requested)
+*.py
+
+# Python compiled files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+env/
+bin/
+share/
+lib/
+pyvenv.cfg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temp files
+*.tmp
+*.log
+
+# Keep these (outputs we want to push)
+!requirements.txt

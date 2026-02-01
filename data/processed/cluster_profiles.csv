@@ -1,0 +1,5 @@
+cluster,customer_lifetime_value_mean,customer_lifetime_value_median,customer_lifetime_value_std,customer_lifetime_value_count,monthly_premium_auto_mean,income_mean,total_claim_amount_mean,months_since_policy_inception_mean,number_of_policies_mean
+0,6593.0,5994.42,1695.27,1633,86.02,36887.39,390.62,46.44,7.31
+1,7318.5,5479.56,5519.82,3088,84.91,67075.76,270.44,49.64,1.99
+2,6436.67,4833.26,4574.64,3538,86.18,14222.51,473.71,47.1,1.88
+3,19403.78,15362.35,12256.8,875,164.47,30029.97,932.59,49.45,2.69
