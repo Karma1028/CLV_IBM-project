@@ -1,5 +1,8 @@
-# Ignore Python source files (as requested)
+# Ignore Python source files
 *.py
+
+# Exception: Allow app.py for Streamlit deployment
+!app.py
 
 # Python compiled files
 __pycache__/
@@ -26,6 +29,9 @@ Thumbs.db
 # Temp files
 *.tmp
 *.log
+
+# Large model files (GitHub limit 100MB)
+*.joblib
 
 # Keep these (outputs we want to push)
 !requirements.txt
