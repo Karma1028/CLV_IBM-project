@@ -1,0 +1,16 @@
+{
+  "model_type": "RandomForestRegressor",
+  "best_params": {
+    "max_depth": 20,
+    "min_samples_split": 2,
+    "n_estimators": 200
+  },
+  "performance": {
+    "Model": "Tuned Random Forest",
+    "MAE": 1378.1163927395066,
+    "RMSE": 4057.891479095588,
+    "R2": 0.6804867126718772,
+    "MAPE": 8.820000723331937
+  },
+  "trained_at": "2026-02-01T03:01:48.916003"
+}
