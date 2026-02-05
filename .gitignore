@@ -1,10 +1,4 @@
-# Ignore Python source files
-*.py
-
-# Exception: Allow app.py for Streamlit deployment
-!app.py
-
-# Python compiled files
+# Ignore Python compiled files
 __pycache__/
 *.pyc
 *.pyo
@@ -30,8 +24,24 @@ Thumbs.db
 *.tmp
 *.log
 
-# Large model files (GitHub limit 100MB)
+# Large data/model files (unless specifically tracked)
+data/
+*.csv
 *.joblib
+models/
 
-# Keep these (outputs we want to push)
-!requirements.txt
+# Ignore general scripts unless important
+scripts/
+old/
+backup/
+
+# Allow important source files
+!app.py
+!generate_magnum_opus.py
+!magnum_opus_chapters/
+!notebooks/
+
+# Report output
+report/
+!report/CLV_Magnum_Opus.pdf
+!report/figures/
