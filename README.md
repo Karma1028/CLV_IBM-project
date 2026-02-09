@@ -1,120 +1,78 @@
+# Customer Lifetime Value (CLV) Analysis Project
 
-# 🚗 Customer Lifetime Value (CLV) Analysis Project
+A comprehensive data analysis project investigating Customer Lifetime Value through an interactive, story-driven web experience. This project combines rigorous statistical analysis with modern web design to present insights in an engaging format.
 
-![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Latest-F7931E?style=flat&logo=scikit-learn&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=flat&logo=streamlit&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Completed-success)
+## 🌟 Live Demo
 
-## 📌 Executive Summary
-This project provides a comprehensive analysis of Customer Lifetime Value (CLV) for an auto insurance company. It includes an end-to-end machine learning pipeline, deep exploratory data analysis, k-means clustering for customer segmentation, and an interactive Streamlit dashboard.
+[View the Project Live](https://unique-rugelach-c75c88.netlify.app/)
 
-We analyzed **9,134 customers** to identify key value drivers and built a predictive model achieving **R² = 0.68** (predicting 68% of value variance).
+## 🔍 Project Overview
 
----
+The core objective is to answer: **"What is a customer truly worth?"**
 
-## 🚀 Key Features
+Using a dataset of 9,134 customers with 24 variables, we perform a deep-dive forensic analysis to predict CLV and segment customers into actionable groups.
 
-### 1. 📊 Deep Analysis & Segmentation
-- **Drivers of Value**: Identified Monthly Premium (0.87 correlation) and Coverage Type (2.4x value multiplier) as top drivers.
-- **Customer Personas**: Segmented customers into 4 strategic groups:
-  - 💎 **High-Value Loyalists** (VIPs)
-  - 🌱 **Growing Potentials** (Upsell targets)
-  - 💰 **Premium Hunters** (Quality focused)
-  - 🔄 **Price-Sensitive Switchers** (Efficiency focused)
+### Key Features:
 
-### 2. 📊 Advanced Visual Analytics (New)
-- **High-Resolution Plots**: All figures generated at 300 DPI for publication quality.
-- **Complex Interactions**:
-  - Violin plots for multivariate distribution analysis.
-  - Hexbin density plots for premium vs. claims.
-  - Pairplots for key metric relationships.
+- **🕵️‍♀️ Detective Mode**: An immersive, chapter-by-chapter storytelling experience that guides you through the analysis step-by-step.
+- **📊 Traditional Mode**: A comprehensive, single-column scrollable report for quick access to all data and charts.
+- **🔮 CLV Predictor**: An interactive tool to calculate predicted CLV based on customer inputs (Income, Policy Tenure, etc.).
+- **🤖 AI Assistant**: Integration with AI to provide on-demand insights and explanations about the data.
+- **📈 Advanced Visualizations**: Interactive Plotly charts for deep data exploration.
 
-### 3. 🤖 Predictive Modeling Pipeline `scripts/`
-- **Modular Design**: Separate steps for data cleaning, EDA, feature engineering, modeling, and inference.
-- **Advanced Techniques**:
-  - Log-transformation for skewed CLV targets.
-  - Interaction features (e.g., `Risk_Score`, `Premium_per_Policy`).
-  - Iterative model selection (Linear -> Tree -> Tuned Random Forest).
-  - Cross-validation for robust performance estimation.
+## 🛠️ Technology Stack
 
-### 3. 🖥️ Interactive Dashboard `app.py`
-- Real-time **CLV Predictor** for new customers.
-- Interactive visualizations of customer segments and distributions.
-- Overview of key portfolio metrics.
-
-### 4. 📄 Comprehensive IEEE Report
-- Automated PDF generation with embedded figures.
-- Conversational, business-focused writing style.
-- Detailed methodological appendix.
-
----
+- **Frontend**: 
+  - HTML5, CSS3 (Custom animations, Glassmorphism design)
+  - Vanilla JavaScript (ES6+)
+  - Plotly.js (Data Visualization)
+  - Marked.js (Markdown rendering)
+- **Backend / Analysis**:
+  - Python (Pandas, Scikit-learn, XGBoost)
+  - Streamlit (Initial prototyping)
+  - Netlify (Deployment)
 
 ## 📂 Project Structure
 
 ```
-CLV_IEEE_Project/
-├── app.py                     # Streamlit Dashboard application
-├── generate_pdf.py            # Automated PDF report generator
-├── requirements.txt           # Project dependencies
-├── models/                    # Saved ML models & preprocessors
-│   ├── final_model.joblib
-│   └── preprocessor.joblib
-├── report/                    # Generated reports & figures
-│   ├── IEEE_CLV_Analysis_Report.pdf
-│   └── figures/               # 20+ generated visualizations
-├── data/                      # Data storage
-│   └── processed/             # Cleaned & featured datasets
-└── scripts/                   # Analysis Pipeline
-    ├── step_01_data_cleaning.py
-    ├── step_02_eda.py
-    ├── step_03_feature_engineering.py
-    ├── step_04_modeling.py
-    ├── step_05_inference.py
-    ├── step_06_clustering_analysis.py   # NEW: Segmentation
-    ├── step_07_deep_eda.py              # NEW: Marketing insights
-    ├── step_08_model_iterations.py      # NEW: Model tuning
-    └── run_all.py                       # Master execution script
+/
+├── website/              # Production-ready web application
+│   ├── css/              # Main stylesheet with animations
+│   ├── js/               # Application logic
+│   │   ├── main.js       # Core functionality & UI handling
+│   │   ├── chapters.js   # Content for all 10 analysis chapters
+│   │   └── ai-integration.js # AI assistant logic
+│   └── index.html        # Main entry point
+├── content.py            # Python source for analysis content
+└── netlify.toml          # Deployment configuration
 ```
+
+## 🚀 Getting Started
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YourUsername/CLV_IEEE_Project.git
+   ```
+
+2. **Run Locally:**
+   - Simply open `website/index.html` in your browser.
+   - Or use a simple HTTP server:
+     ```bash
+     cd website
+     python -m http.server 8000
+     ```
+
+## 📊 Analysis Highlights
+
+- **Model Accuracy**: ~89.1% using XGBoost Regressor.
+- **Customer Segmentation**: Identified 4 distinct "Tribes" tailored for specific marketing strategies.
+- **Projected ROI**: Strategy implementation estimated to yield ~$2.78M return.
+
+## 📝 License
+
+This project is open-source and available under the MIT License.
 
 ---
-
-## 🛠️ Installation & Usage
-
-### 1. Setup Environment
-```bash
-pip install -r requirements.txt
-```
-
-### 2. Run Analysis Pipeline
-To regenerate all analysis, models, and figures:
-```bash
-python scripts/run_all.py
-```
-*Note: This will execute steps 1 through 8 sequentially.*
-
-### 3. Launch Dashboard
-To explore insights interactively:
-```bash
-streamlit run app.py
-```
-
-### 4. Generate PDF Report
-To build the final PDF report:
-```bash
-python generate_pdf.py
-```
-
----
-
-## 📈 Model Performance
-| Metric | Value | Interpretation |
-|--------|-------|----------------|
-| **R² Score** | **0.68** | Explains 68% of variance in customer value |
-| **MAE** | **$1,378** | Average prediction error |
-| **MAPE** | **8.8%** | Average percentage error |
-
-**Key Insight**: The model significantly outperforms baseline approaches and linear regression (which failed to capture non-linear patterns).
-
----
-*Generated for IEEE CLV Analysis Project*
+**Analysis by Tuhin Bhattacharya**  
+PGDM Business Data Analytics  
+Goa Institute of Management

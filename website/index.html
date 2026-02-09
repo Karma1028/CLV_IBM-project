@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CLV Case Files | A Detective Story in Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="bg-gradient"></div>
+        <div class="bg-grid"></div>
+        <div class="bg-glow glow-1"></div>
+        <div class="bg-glow glow-2"></div>
+        <div class="bg-glow glow-3"></div>
+    </div>
+    <div id="particles"></div>
+
+    <!-- ===== LANDING PAGE ===== -->
+    <section id="landing" class="landing-page active">
+        <div class="landing-wrapper">
+            <!-- Floating Elements -->
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+
+            <div class="landing-content">
+                <div class="badge-container">
+                    <span class="case-badge">
+                        <span class="badge-icon">📂</span>
+                        <span class="badge-text">CASE FILE #2024-CLV</span>
+                        <span class="badge-status">ACTIVE</span>
+                    </span>
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="title-prefix">The Investigation of</span>
+                    <span class="title-main">
+                        <span class="gradient-text">Customer</span>
+                        <span class="gradient-text">Lifetime</span>
+                        <span class="gradient-text">Value</span>
+                    </span>
+                </h1>
+
+                <p class="hero-subtitle">
+                    <span class="typewriter">9,134 customers. 24 variables. One question:</span>
+                    <span class="highlight-text">What is a customer truly worth?</span>
+                </p>
+
+                <!-- Stats Cards -->
+                <div class="hero-stats">
+                    <div class="stat-card glass">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-content">
+                            <span class="stat-value counter" data-target="89.1">0</span>
+                            <span class="stat-unit">%</span>
+                            <span class="stat-label">Model Accuracy</span>
+                        </div>
+                        <div class="stat-glow"></div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-content">
+                            <span class="stat-value">4</span>
+                            <span class="stat-unit">Tribes</span>
+                            <span class="stat-label">Customer Segments</span>
+                        </div>
+                        <div class="stat-glow"></div>
+                    </div>
+                    <div class="stat-card glass">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-content">
+                            <span class="stat-value">$2.78</span>
+                            <span class="stat-unit">M</span>
+                            <span class="stat-label">Projected ROI</span>
+                        </div>
+                        <div class="stat-glow"></div>
+                    </div>
+                </div>
+
+                <!-- Mode Selection -->
+                <div class="mode-section">
+                    <h2 class="mode-title">Choose Your Experience</h2>
+
+                    <div class="mode-grid">
+                        <div class="mode-card detective-card" onclick="enterMode('detective')">
+                            <div class="card-bg"></div>
+                            <div class="card-border"></div>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <span class="icon-main">🔍</span>
+                                    <div class="icon-ring"></div>
+                                </div>
+                                <h3>Detective Mode</h3>
+                                <p>Immersive chapter-by-chapter investigation. Uncover clues one step at a time.</p>
+                                <ul class="features">
+                                    <li><span class="check">✓</span> Cinematic storytelling</li>
+                                    <li><span class="check">✓</span> Dramatic reveals</li>
+                                    <li><span class="check">✓</span> AI-powered insights</li>
+                                </ul>
+                                <button class="card-btn">
+                                    <span>Begin Investigation</span>
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                            </div>
+                            <div class="card-shine"></div>
+                        </div>
+
+                        <div class="mode-card traditional-card" onclick="enterMode('traditional')">
+                            <div class="card-bg"></div>
+                            <div class="card-border"></div>
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <span class="icon-main">📊</span>
+                                    <div class="icon-ring"></div>
+                                </div>
+                                <h3>Traditional Mode</h3>
+                                <p>Complete scrollable analysis. All chapters, all data, at your own pace.</p>
+                                <ul class="features">
+                                    <li><span class="check">✓</span> Full content view</li>
+                                    <li><span class="check">✓</span> Easy navigation</li>
+                                    <li><span class="check">✓</span> Quick reference</li>
+                                </ul>
+                                <button class="card-btn secondary">
+                                    <span>View Full Report</span>
+                                    <span class="btn-arrow">→</span>
+                                </button>
+                            </div>
+                            <div class="card-shine"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credits -->
+                <div class="credits glass-subtle">
+                    <span class="credit-text">Analysis by</span>
+                    <span class="credit-name">Tuhin Bhattacharya</span>
+                    <span class="credit-divider">|</span>
+                    <span class="credit-info">PGDM Business Data Analytics</span>
+                    <span class="credit-divider">|</span>
+                    <span class="credit-info">Goa Institute of Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== DETECTIVE MODE ===== -->
+    <section id="detective-mode" class="detective-mode">
+        <nav class="nav-bar glass">
+            <button class="nav-btn back-btn" onclick="goToLanding()">
+                <span class="btn-icon">←</span>
+                <span class="btn-text">Menu</span>
+            </button>
+            <div class="progress-section">
+                <div class="chapter-indicator">
+                    <span class="chapter-current">Chapter 1</span>
+                    <span class="chapter-divider">/</span>
+                    <span class="chapter-total">10</span>
+                </div>
+                <div class="progress-track">
+                    <div id="progress-fill" class="progress-fill"></div>
+                    <div class="progress-glow"></div>
+                </div>
+            </div>
+            <button class="nav-btn ai-btn" onclick="openAIPanel()">
+                <span class="btn-icon">🤖</span>
+                <span class="btn-text">AI Assistant</span>
+                <span class="btn-pulse"></span>
+            </button>
+        </nav>
+
+        <div id="chapter-container" class="chapter-viewport">
+            <!-- Chapters loaded dynamically -->
+        </div>
+
+        <nav class="chapter-controls">
+            <button id="prev-btn" class="control-btn prev" onclick="prevChapter()" disabled>
+                <span class="control-icon">←</span>
+                <span class="control-text">Previous</span>
+            </button>
+            <div class="chapter-dots" id="chapter-dots"></div>
+            <button id="next-btn" class="control-btn next" onclick="nextChapter()">
+                <span class="control-text">Next</span>
+                <span class="control-icon">→</span>
+            </button>
+        </nav>
+    </section>
+
+    <!-- ===== TRADITIONAL MODE ===== -->
+    <section id="traditional-mode" class="traditional-mode">
+        <nav class="nav-bar glass">
+            <button class="nav-btn back-btn" onclick="goToLanding()">
+                <span class="btn-icon">←</span>
+                <span class="btn-text">Menu</span>
+            </button>
+            <div class="nav-links" id="nav-links"></div>
+            <button class="nav-btn ai-btn" onclick="openAIPanel()">
+                <span class="btn-icon">🤖</span>
+                <span class="btn-text">AI</span>
+            </button>
+        </nav>
+        <div class="traditional-content" id="traditional-content"></div>
+    </section>
+
+    <!-- ===== AI PANEL ===== -->
+    <div id="ai-overlay" class="ai-overlay" onclick="closeAIPanel()"></div>
+    <div id="ai-panel" class="ai-panel glass">
+        <div class="ai-header">
+            <div class="ai-title">
+                <span class="ai-icon">🤖</span>
+                <h3>CLV AI Assistant</h3>
+            </div>
+            <button class="close-btn" onclick="closeAIPanel()">×</button>
+        </div>
+        <div class="ai-body">
+            <div id="ai-messages" class="ai-messages">
+                <div class="ai-message bot">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <p>Hello! I'm your CLV AI Assistant. I can:</p>
+                        <ul>
+                            <li>Generate personalized reports</li>
+                            <li>Explain predictions</li>
+                            <li>Provide strategic recommendations</li>
+                        </ul>
+                        <p>Make a CLV prediction first, then ask me anything!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ai-actions">
+                <button class="action-btn" onclick="aiQuickAction('report')">
+                    <span>📝</span> Report
+                </button>
+                <button class="action-btn" onclick="aiQuickAction('explain')">
+                    <span>❓</span> Explain
+                </button>
+                <button class="action-btn" onclick="aiQuickAction('strategy')">
+                    <span>📈</span> Strategy
+                </button>
+            </div>
+            <div class="ai-input">
+                <input type="text" id="ai-input" placeholder="Ask about CLV..." onkeypress="handleAIKeypress(event)">
+                <button class="send-btn" onclick="sendAIMessage()">
+                    <span>→</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== PREDICTOR MODAL ===== -->
+    <div id="predictor-modal" class="modal" style="display: none;">
+        <div class="modal-backdrop" onclick="closePredictorModal()"></div>
+        <div class="modal-content glass">
+            <button class="modal-close" onclick="closePredictorModal()">×</button>
+            <div class="modal-header">
+                <div class="modal-icon">🔮</div>
+                <h2>CLV Prediction</h2>
+                <p>Calculate lifetime value & get AI insights</p>
+            </div>
+            <form id="prediction-form" class="predictor-form">
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label>Annual Income</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="income" value="50000" min="0" max="200000" step="5000">
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label>Monthly Premium</label>
+                        <div class="input-wrapper">
+                            <span class="input-prefix">$</span>
+                            <input type="number" id="premium" value="100" min="50" max="300" step="5">
+                        </div>
+                    </div>
+                    <div class="form-field full-width">
+                        <label>Policy Tenure: <output id="tenure-value">24</output> months</label>
+                        <input type="range" id="tenure" value="24" min="1" max="120" class="slider">
+                    </div>
+                    <div class="form-field">
+                        <label>Number of Policies</label>
+                        <input type="number" id="policies" value="2" min="1" max="10">
+                    </div>
+                    <div class="form-field">
+                        <label>Coverage Type</label>
+                        <select id="coverage">
+                            <option value="basic">Basic</option>
+                            <option value="extended" selected>Extended</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </div>
+                    <div class="form-field">
+                        <label>Vehicle Class</label>
+                        <select id="vehicle">
+                            <option value="sedan" selected>Four-Door Car</option>
+                            <option value="suv">SUV</option>
+                            <option value="luxury">Luxury Car</option>
+                            <option value="sports">Sports Car</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="predict-btn">
+                    <span class="btn-icon">🔮</span>
+                    <span>Calculate CLV</span>
+                </button>
+            </form>
+            <div id="prediction-result" class="prediction-result hidden">
+                <div class="result-card">
+                    <div class="result-label">Predicted Customer Lifetime Value</div>
+                    <div class="result-value" id="clv-value">$8,450</div>
+                    <div class="result-segment">
+                        <span id="segment-emoji">🏠</span>
+                        <span id="segment-name">Steady Eddie</span>
+                    </div>
+                    <p id="segment-desc" class="result-desc"></p>
+                    <button class="ai-report-btn" onclick="generateAIReport()">
+                        <span>🤖</span> Generate AI Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/chapters.js"></script>
+    <script src="js/ai-integration.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
