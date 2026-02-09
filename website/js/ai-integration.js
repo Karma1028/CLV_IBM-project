@@ -301,6 +301,17 @@ function sendAIMessage() {
 }
 
 // Export functions
+// Export functions globally for HTML handlers and main.js
+window.setPredictionContext = setPredictionContext;
+window.generateCLVReport = generateCLVReport;
+window.explainPrediction = explainPrediction;
+window.getStrategicAdvice = getStrategicAdvice;
+window.sendCustomMessage = sendCustomMessage;
+window.aiQuickAction = aiQuickAction;
+window.handleAIKeypress = handleAIKeypress;
+window.sendAIMessage = sendAIMessage;
+
+// Keep namespace for cleaner internal usage if needed
 window.AI = {
     setPredictionContext,
     generateCLVReport,
