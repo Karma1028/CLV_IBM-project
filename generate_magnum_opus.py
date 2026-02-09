@@ -125,6 +125,18 @@ def create_styles():
         spaceAfter=10,
         textColor=colors.HexColor('#2d3436')
     ))
+
+    # Author Info
+    styles.add(ParagraphStyle(
+        name='AuthorInfo',
+        fontName='Times-Roman',
+        fontSize=12,
+        leading=16,
+        alignment=TA_CENTER,
+        spaceBefore=6,
+        spaceAfter=6,
+        textColor=colors.HexColor('#1a1a2e')
+    ))
     
     return styles
 
@@ -2258,6 +2270,12 @@ def build_document():
         "Feature Engineering, Machine Learning, and Customer Segmentation",
         styles['DenseBody']
     ))
+    
+    story.append(Spacer(1, 0.5*inch))
+    story.append(Paragraph("<b>Author:</b> Tuhin", styles['AuthorInfo']))
+    story.append(Paragraph("<b>GitHub:</b> <a href='https://github.com/Karma1028/CLV_IBM-project' color='blue'>Karma1028/CLV_IBM-project</a>", styles['AuthorInfo']))
+    story.append(Paragraph("<b>Live Application:</b> <a href='https://unique-rugelach-c75c88.netlify.app/' color='blue'>CLV Dashboard</a>", styles['AuthorInfo']))
+    
     story.append(PageBreak())
     
     # Table of Contents
