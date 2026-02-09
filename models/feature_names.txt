@@ -7,7 +7,6 @@ num__number_of_policies
 num__total_claim_amount
 num__insurance_loss_ratio
 num__premium_per_policy
-num__complaint_flag
 cat__state_arizona
 cat__state_california
 cat__state_nevada
@@ -73,6 +72,7 @@ cat__coverage_education_premium_high school or below
 cat__coverage_education_premium_master
 cat__tenure_category_established
 cat__tenure_category_loyal
-cat__tenure_category_nan
 cat__tenure_category_new
+cat__tenure_category_unknown
 cat__tenure_category_veteran
+remainder__complaint_flag

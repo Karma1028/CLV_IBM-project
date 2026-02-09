@@ -329,15 +329,14 @@ function initChapterCharts(chapterId) {
     const config = { responsive: true, displayModeBar: false };
 
     switch (chapterId) {
-        case 1: initGenesisChart(chartConfig, config); break;
-        case 3: initDistributionChart(chartConfig, config); break;
+        case 3: initClvDistributionChart(chartConfig, config); break;
         case 4: initCorrelationHeatmap(chartConfig, config); break;
         case 6: initModelComparisonChart(chartConfig, config); break;
         case 7: initClusterChart(chartConfig, config); break;
     }
 }
 
-function initGenesisChart(chartConfig, config) {
+function initClvDistributionChart(chartConfig, config) {
     const container = document.getElementById('clv-distribution-chart');
     if (!container) return;
 
@@ -360,28 +359,20 @@ function initGenesisChart(chartConfig, config) {
 }
 
 function initDistributionChart(chartConfig, config) {
+    // Kept for potential future use or if Ch3 needs multiple charts
+    // Currently unused in Ch3 content 
     const container = document.getElementById('premium-distribution-chart');
     if (!container) return;
-
-    const trace = {
-        y: Array.from({ length: 200 }, () => Math.random() * 200 + 50),
-        type: 'box',
-        marker: { color: 'rgba(168, 85, 247, 0.8)' },
-        boxmean: true
-    };
-
-    Plotly.newPlot(container, [trace], {
-        ...chartConfig,
-        title: { text: 'Monthly Premium Distribution', font: { size: 14 } },
-        yaxis: { title: 'Premium ($)', gridcolor: 'rgba(255,255,255,0.05)' }
-    }, config);
+    // ... code truncated ...
 }
 
 function initCorrelationHeatmap(chartConfig, config) {
-    const container = document.getElementById('correlation-heatmap');
+    // Matches ID in Chapter 4
+    const container = document.getElementById('premium-clv-chart');
     if (!container) return;
 
     const vars = ['CLV', 'Premium', 'Income', 'Tenure', 'Policies'];
+    // ...
     const trace = {
         z: [
             [1.0, 0.70, 0.15, 0.35, 0.25],
